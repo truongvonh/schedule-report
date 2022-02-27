@@ -1,0 +1,17 @@
+# .github/workflows/scheduled-builds.yml
+name: Github Cron job running for daily report
+
+on:
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '* * * * *'
+jobs:
+  build:
+    name: Trigger Site Rebuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request
+        # Hit the webhook endpoint to rebuild  from the "main" branch
+        #run: curl -X POST -d {} https://<webhook-endpoint-url>
+        echo "cron job is running"
+
