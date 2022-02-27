@@ -13,5 +13,5 @@ jobs:
       - name: cURL request
         # Hit the webhook endpoint to rebuild  from the "main" branch
         #run: curl -X POST -d {} https://<webhook-endpoint-url>
-        echo "cron job is running"
-
+        run: echo "cron job is running"
+        
